@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListeFactory {
+	
+	
+	static String getGCMSportDS(){
+		return "";
+	}
+	
+	public List<TreatmentListAbstract> create() {
+		List<TreatmentListAbstract> treatmentsListAbstract = new ArrayList<TreatmentListAbstract>()
+				{{
+					add(new ListeAgent());
+					add(new ListeTypeMachine());
+					add(new ListeTypeArret());
+				}};
+				
+		for(TreatmentListAbstract treatmentListAbstract : treatmentsListAbstract) {
+			treatmentListAbstract.treatment();
+		}
+		
+		return treatmentsListAbstract;
+	}
+
+	public int getCpt() {
+		return this.cpt;
+	}
+
+	public void setCpt(int cpt) {
+		this.cpt = cpt;
+	}
+}

@@ -1,0 +1,11 @@
+
+/*
+ * Question : 
+ * Avec un tableau de tous les nombres de 1 à N, où N <= 32 0000.
+ * Le tableau peut avoir des dupliqués et on ne sait pas quelle est la valeur du nombre N
+ * Avec seulement 4 KiloBytes de mémoire disponibles, comment peut on écrire tous les dupliqués dans le tableau ?
+ */
+
+public class Q5_FindDuplicates {
+	
+}

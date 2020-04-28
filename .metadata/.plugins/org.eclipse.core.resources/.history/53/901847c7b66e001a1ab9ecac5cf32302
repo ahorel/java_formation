@@ -1,0 +1,12 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+	public static void main(String[] args) {
+		ClasseAbstraite c = new SousClasseA();
+		List<String> list = c.traitement(new ArrayList<String>());
+		list.stream().forEach(System.out::println);
+	}
+}
+
+

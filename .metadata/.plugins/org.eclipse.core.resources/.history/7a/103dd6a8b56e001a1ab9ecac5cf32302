@@ -1,0 +1,25 @@
+import java.util.List;
+
+public class Main {
+	public static void main(String[] args) {
+		ClasseAbstraite c = new SousClasseA();
+		c.traitement(new ArrayList<String>());
+	}
+}
+public abstract class ClasseAbstraite{
+	public abstract String traitement(String creationColisVO);
+}
+public class SousClasseA extends ClasseAbstraite{
+	public List<String> traitement(List<String> list) {
+		list.add("1er element");
+		return list;
+	}
+}
+
+public class SousClasseB extends ClasseAbstraite {
+	public List<String> traitement(List<String> list) {
+		list.add("1er element");
+		list.add("2eme element");
+		return list;
+	}
+}

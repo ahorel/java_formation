@@ -1,0 +1,89 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Main {
+
+	public static void main(String[] args) {
+		new ListeFactory().create();
+		System.out.println(" finalisation du compteur cpt = " + TreatmentListInterface.cpt);
+	}
+
+}public interface TreatmentListInterface {
+	public List<String> trans;
+	public int cpt = 0;
+	
+	public List treatment();
+	
+	public default List<String> getConnection() {
+		return trans;
+	}
+	
+	static Sttring getGCMSportDS(){
+		return "";
+	}
+}
+
+public class ListeAgent implements TreatmentListInterface {
+	@Override
+	public List<String> treatment() {
+		TreatmentListInterface.cpt++;
+		List<String> ajoutListeAgent = Arrays.asList("1","2","3");
+		trans.addAll(ajoutListeAgent);
+		
+		for (String s : TreatmentListInterface.trans) {
+			System.out.println("ListeAgent trans=" + s);
+		}
+		
+		return TreatmentListInterface.trans;
+	}
+}
+
+public class ListeTypeArret implements TreatmentListInterface {
+	@Override
+	public List<String> treatment() {
+		TreatmentListInterface.cpt++;
+		List<String> ajoutListeTypeArret = Arrays.asList("4","5","6");
+		trans.addAll(ajoutListeTypeArret);
+		
+		for (String s : TreatmentListInterface.trans) {
+			System.out.println("ListeTypeArret trans=" + s);
+		}
+		
+		return TreatmentListInterface.trans;
+	}
+}
+
+public class ListeTypeMachine implements TreatmentListInterface {
+	@Override
+	public List<String> treatment() {
+		TreatmentListInterface.cpt++;
+		List<String> ajoutListeTypeMachine = Arrays.asList("7","8","9");
+		trans.addAll(ajoutListeTypeMachine);
+		
+		for (String s : TreatmentListInterface.trans) {
+			System.out.println("ListeTypeMachine trans=" + s);
+		}
+		
+		return TreatmentListInterface.trans;
+	}
+}
+
+public class ListeFactory {
+	
+	
+	public List<TreatmentListInterface> create() {
+		List<TreatmentListInterface> treatmentsListInterface = new ArrayList<TreatmentListInterface>()
+				{{
+					add(new ListeAgent());
+					add(new ListeTypeMachine());
+					add(new ListeTypeArret());
+				}};
+				
+		for(TreatmentListInterface treatmentListInterface : treatmentsListInterface) {
+			treatmentListInterface.treatment();
+		}
+		
+		return treatmentsListInterface;
+	}
+}

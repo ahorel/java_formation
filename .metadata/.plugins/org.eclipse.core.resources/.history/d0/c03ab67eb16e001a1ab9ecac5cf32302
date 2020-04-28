@@ -1,0 +1,57 @@
+
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("test");
+	}
+}
+public abstract class ClasseAbstraite{
+	public abstract String traitement(String creationColisVO);
+}
+public class sousClasseA extends ClasseAbstraite{
+	public CreationColisVO traitement(CreationColisVO creationColisVO) {
+		if (CategorieColis.Atypiques.is(CategorieColis.getByCode(creationColisVO.getConditionnementEnCours().getCodeCtgColisAtl())) 
+                && (creationColisVO.getConditionnementEnCours().getCoupure() != null)){
+            creationColisVO.getConditionnementEnCours().setCoupure(null);
+            if (!creationColisVO.getCodesCoupureES1().isEmpty()){
+                creationColisVO.getCodesCoupureES1().remove(0);
+                creationColisVO.getCodesCoupureES2().remove(0);
+            }
+        }
+		return creationColisVO;
+	}
+	
+	public CreationColisVO traitement(CreationColisVO creationColisVO) {
+		if (creationColisVO.getCodesCoupureES1().size() == 0 && creationColisVO.getCodesCoupureES2().size() == 0) {
+            if (CategorieColis.Atypiques.is(CategorieColis.getByCode(creationColisVO.getConditionnementEnCours().getCodeCtgColisAtl()))){
+                creationColisVO.addCodeCoupureES1(CoupureS1.euro5.fetchCode());
+                creationColisVO.addCodeCoupureES1(CoupureS1.euro10.fetchCode());
+                creationColisVO.addCodeCoupureES1(CoupureS1.euro20.fetchCode());
+                creationColisVO.addCodeCoupureES1(CoupureS1.euro50.fetchCode());
+                creationColisVO.addCodeCoupureES1(CoupureS2.euro5.fetchCode());
+                creationColisVO.addCodeCoupureES1(CoupureS2.euro10.fetchCode());
+                creationColisVO.addCodeCoupureES1(CoupureS2.euro20.fetchCode());
+                creationColisVO.addCodeCoupureES1(CoupureS2.euro50.fetchCode());
+            }
+            creationColisVO.addCodeCoupureES1(CoupureS1.euro100.fetchCode());
+            creationColisVO.addCodeCoupureES1(CoupureS1.euro200.fetchCode());
+            creationColisVO.addCodeCoupureES1(CoupureS1.euro500.fetchCode());
+            creationColisVO.addCodeCoupureES2(CoupureS2.euro100.fetchCode());
+            creationColisVO.addCodeCoupureES2(CoupureS2.euro200.fetchCode());
+            creationColisVO.addCodeCoupureES2(CoupureS2.euro500.fetchCode());
+        }
+		return creationColisVO;
+	}
+	
+	public class Handler extends TraitementTypeColisAbstract{
+
+		@Override
+		public CreationColisVO traitement() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public CreationColisVO perform(CreationColisVO creationColisVO) {
+			TraitementTypeColisAbstract t;
+			return t.traitement(creationColisVO);
+			
+		}
+	}

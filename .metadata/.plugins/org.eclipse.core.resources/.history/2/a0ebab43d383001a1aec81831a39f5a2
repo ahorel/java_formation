@@ -1,0 +1,17 @@
+import java.util.List;
+
+public interface TreatmentListInterface {
+	public List<String> trans;
+	public int cpt = 0;
+	
+	public List treatment();
+	
+	public default List<String> getConnection() {
+		return trans;
+	}
+	
+	static String getGCMSportDS(){
+		return "";
+	}
+}
+

@@ -1,0 +1,23 @@
+
+public class Main {
+	public static void main(String[] args) {
+		ClasseAbstraite c;
+		c.traitement("");
+	}
+}
+public abstract class ClasseAbstraite{
+	public abstract String traitement(String creationColisVO);
+}
+public class sousClasseA extends ClasseAbstraite{
+	public String traitement(String creationColisVO) {
+		
+		return "a";
+	}
+}
+
+public class sousClasseB extends ClasseAbstraite {
+	public String traitement(String creationColisVO) {
+		
+		return "b";
+	}
+}

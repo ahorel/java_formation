@@ -1,0 +1,22 @@
+
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("test");
+	}
+}
+public abstract class ClasseAbstraite{
+	public abstract String traitement(String creationColisVO);
+}
+public class sousClasseA extends ClasseAbstraite{
+	public String traitement(String creationColisVO) {
+		
+		return creationColisVO;
+	}
+}
+
+public class sousClasseB extends ClasseAbstraite {
+	public String traitement(String creationColisVO) {
+		
+		return creationColisVO;
+	}
+}

@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Main {
+
+	public static void main(String[] args) {
+		new ListeFactory().create();
+		System.out.println(" finalisation du compteur cpt = " + TreatmentListInterface.cpt);
+	}
+
+}
+
+
+
+
+
+public class ListeTypeMachine implements TreatmentListInterface {
+	@Override
+	public List<String> treatment() {
+		TreatmentListInterface.cpt++;
+		List<String> ajoutListeTypeMachine = Arrays.asList("7","8","9");
+		trans.addAll(ajoutListeTypeMachine);
+		
+		for (String s : TreatmentListInterface.trans) {
+			System.out.println("ListeTypeMachine trans=" + s);
+		}
+		
+		return TreatmentListInterface.trans;
+	}
+}
+
+

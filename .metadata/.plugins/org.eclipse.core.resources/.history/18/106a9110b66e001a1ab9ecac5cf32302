@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+	public static void main(String[] args) {
+		ClasseAbstraite c = new SousClasseA();
+		List<String> list = c.traitement(new ArrayList<String>());
+		list.stream().forEach(System.out::println);
+	}
+}
+public abstract class ClasseAbstraite{
+	public abstract List<String> traitement(List<String> list);
+}
+public class SousClasseA extends ClasseAbstraite{
+	public List<String> traitement(List<String> list) {
+		list.add("1er element");
+		return list;
+	}
+}
+
+public class SousClasseB extends ClasseAbstraite {
+	public List<String> traitement(List<String> list) {
+		list.add("1er element");
+		list.add("2eme element");
+		return list;
+	}
+}

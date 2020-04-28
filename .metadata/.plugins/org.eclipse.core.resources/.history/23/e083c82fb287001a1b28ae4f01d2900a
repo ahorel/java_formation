@@ -1,0 +1,33 @@
+import java.util.Arrays;
+
+public class Q5_BitVector {
+		int[] bitset;
+		
+		public Q5_BitVector(int size) {
+			bitset = new int[(size >> 5) + 1 ]; // Divide by 32
+												// copies leftmost bit use with numbers ( les 5 bits de gauche sont à 1 )
+			System.out.println("[Constructeur BitVector] (size)=" + size + "size=" + Integer.toBinaryString(size) + " (size >> 5)=" + Integer.toBinaryString((size >> 5)));
+			System.out.println("[Constructeur BitVector] bitset=" + Arrays.toString(bitset));
+		}
+		
+		public void set(int pos) {
+			int wordNumbers = (pos >> 5); // Divide by 32
+										  // Les 5 bits de gauche sont à 1
+			int bitNumbers = (pos & 0x1F); // Mod 32
+			bitset[wordNumbers] |= 1 << bitNumbers; // Le bit à l'index BitNumbers est tourné à 
+			System.out.println("[set] wordNumbers=" + Integer.toBinaryString(wordNumbers) + " bitNumbers=" + Integer.toBinaryString(bitNumbers));
+			System.out.println("[set] bitset=" + Arrays.toString(bitset));
+
+		}
+		
+		public boolean get(int pos) {
+			int wordNumbers = (pos >> 5); // Divide by 32
+			int bitNumber = (pos & 0x1F);
+			
+			System.out.println("[get] wordNumbers=" + Integer.toBinaryString(wordNumbers) + " bitNumber=" + Integer.toBinaryString(bitNumber));
+			System.out.println("[get] bitset=" + Arrays.toString(bitset) + " bitset[wordNumbers]=" + Integer.toBinaryString(bitset[wordNumbers]) + " (1 << bitNumber)=" + Integer.toBinaryString((1 << bitNumber)));
+			
+			return (bitset[wordNumbers] & (1 << bitNumber)) != 0;
+
+		}
+	}

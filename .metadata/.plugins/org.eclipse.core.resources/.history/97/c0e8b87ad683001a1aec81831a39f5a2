@@ -1,0 +1,18 @@
+import java.util.Arrays;
+import java.util.List;
+
+	public class ListeTypeMachine implements TreatmentListInterface {
+		@Override
+		public List<String> treatment() {
+			TreatmentListInterface.cpt++;
+			List<String> ajoutListeTypeMachine = Arrays.asList("7","8","9");
+			trans.addAll(ajoutListeTypeMachine);
+			
+			for (String s : TreatmentListInterface.trans) {
+				System.out.println("ListeTypeMachine trans=" + s);
+			}
+			
+			return TreatmentListInterface.trans;
+		}
+	}
+

@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class Main {
+	
+
+	public static void main(String[] args) {
+		/*ClasseAbstraite c = new SousClasseA();
+		List<String> list = c.traitement(new ArrayList<String>());
+		list.stream().forEach(System.out::println);
+		c.traitementGlobal();*/
+		
+		/*
+		Etape etape = new Etape();
+		etape.setState(new Etape1());
+		etape.getState().treatment();
+		etape.setNext();
+		etape.setState(new Etape2());
+		etape.getState().treatment();
+		*/
+		
+		Etape.InnerEtape innerEtape = new Etape.InnerEtape();
+		innerEtape.treatment();
+		
+	}
+}
+

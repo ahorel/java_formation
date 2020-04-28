@@ -1,0 +1,5 @@
+import java.math.BigDecimal;
+
+public abstract class Discounter {
+    abstract BigDecimal applyDiscount(BigDecimal amount);
+}

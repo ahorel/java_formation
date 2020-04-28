@@ -1,0 +1,41 @@
+
+public class CheckPermutation {
+
+	String sort(String s) {
+		char[] content = s.toCharArray();
+		java.util.Arrays.sort(content);
+		return new String(content);
+	}
+	
+	boolean permute(String s, String t) {
+		if(s.length() != t.length()) {
+			return false;
+		}
+		return sort(s).equals(sort(t));
+	}
+	
+	 boolean permute_countNumberCaracters(String s, String t) {
+		if(s.length() != t.length()) {
+			return false;
+		}
+		int[] letters = new int[128]; //assumption
+		char[] s_array = s.toCharArray();
+
+		for(char c : s_array) {
+			letters[c]++;
+		}
+		for(int i = 0; i < t.length();i++) {
+			int c = (int) t.charAt(i);
+			letters[c]--;
+			if(letters[c] <0)
+			{
+				return false;
+			}
+		}
+		String a = null;
+		String b = null;
+		('a'=='b')?return false : return true;
+		return true;
+		
+	}
+}

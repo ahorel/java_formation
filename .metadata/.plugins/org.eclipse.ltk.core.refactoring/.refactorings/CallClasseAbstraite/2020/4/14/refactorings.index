@@ -1,0 +1,5 @@
+1585841496533	Encapsulate field 'state'
+1585841896715	Move type 'Etape1' to new file
+1585841909252	Move type 'Etape2' to new file
+1585841923905	Move type 'Etape' to new file
+1585841935572	Move type 'EtapesAbstract' to new file

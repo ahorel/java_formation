@@ -1,0 +1,11 @@
+import java.util.List;
+
+public abstract class TreatmentListAbstract {
+	public int cpt = 0;
+	public List<String> trans = null;
+	
+	public abstract List treatment();
+	
+
+}
+

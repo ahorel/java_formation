@@ -1,0 +1,189 @@
+/*
+ * Imaginez de lire un flux d'entiers.
+ * Implémenter un algorithme permettant de chercher un rang d'un nombre x (le nombre de valeur inférieur ou égal à x)
+ * Implémenter la structure de données permettant d'effectuer ces opérations
+ * C'est à dire, implémenter la méthode track(int x), appelé quand chaque nombre est généré et la méthode getRankOfNumber (int x)
+ * qui retourne le nombre de valeur inferieur ou égal à x, incluant x également
+ * 
+ * SOLUTION : 
+ * Une solution facile serait d'avoir un tableau qui contient tous les éléments
+ * Quand un élément arrive en entrée on devrait faire un shift sur les autres éléments pour faire de la place
+ * Implementer la méthode getRankOfNumber serait efficace ici,
+ * MAIS ce serait inefficace pour effectuer l'insertion des élements, on a besoin d'une structure de données qui gardent l'ordre des données
+ * Aussi bien que pour la mise à jour des elements
+ * 
+ * => Un binarySearchTree est alors la bonne solution
+ * Pour l'insertion des élements, la complexité sera alors o(log(n)) en temps, où n est le taille de l'arbre
+ * Pour trouver le rang des elements, on peut faire une traversée ordonnée, en gardant un compteur qui permettra de savoir si l'on dépasse le rang de l'element recherché 
+ * (faire au moins "(rang de x)-pas"
+ * Autant que nous nous déplacons sur la gauche, cherchant pour x, le compteur ne changera pas . Car tous les elements sur la droite que nous 
+ * ne cherchons pas sont plus grand que x
+ * Quand nous nous déplacons sur la droite, les éléments sur la gauche que nous échappons, sont plus petit ou égal à x, il faudra alors incrémenter le compteur
+ * 
+ * Au lieu de compter la taille du sous arbre de gauche, on peut garder cette information quand on ajoute des elements à l'arbre.
+ * 
+ * (Exemple de l'arbre dans le livre)
+ * 
+ * Supposons que nous cherchons le rang du noeud 24 dans l'arbre.
+ * Puisque le noeud 24 est supérieur au noeud racine 20, 24 devrait être situé sur la droite.
+ * La racine a 4 éléments dans le sous arbre de gauche, et quand nous incluons le noeud racine, ca fait un total de 5 noeud plus petit que 24.
+ * Donc nous établissons son rang à 5
+ * 
+ * Ensuite on compare 24 au noeud suivant 25
+ * 24 doit être donc positionné sur la gauche, le compteur ne doit pas être incrémenté car nous n'échappons pas des noeuds plus petits
+ * Le compteur est toujours à 5
+ * 
+ * Ensuite nous comparons 24 au noeud suivant 23.
+ * 24 > 23 donc il doit être positionné sur la droite. 
+ * Le compteur est élors incrémenté de 1 puisque 23 n'a pas de noeud sur la gauche. Le compteur est à 6
+ * 
+ * Finalement, nous retournons 24 avec un compteur de 6
+ *
+ * Algorithme récursif de getRank
+ * int getRank(Node node, int x) {
+ * if x is node.data; return node.leftSize()
+ * if x is on left of node, return getRank(node.left, x)
+ * if x is on right of node, return getRank(node.left,x) + 1 + getRank(node.right,x)
+ * }
+ */
+
+/*
+public class NodeRank {
+	int data = 0;
+	NodeRank left, right;
+	int left_size = 0;
+	
+	public NodeRank(int d) {
+		this.data = d;
+	}
+	
+	public int getRank( int x) {
+		
+		if(x == this.data) {return left_size;}
+		else if (x < data) {
+			if(left == null) return -1;
+			else
+			return left.getRank(x);
+		}
+		else if (x > data) {
+			int size_right = right.getRank(x);
+			if(size_right == - 1) return -1;
+			return left_size + 1 + size_right;
+		}
+		else {
+			return -1;
+		}
+	}
+	
+	public void insert(int d) {
+		if (d < data) {
+			if(this.left == null) {
+				this.left = new NodeRank(d);
+			}
+			else {
+				left.insert( d);
+				left_size++;
+			}
+		}
+		else if (d > data) {
+			if(this.right == null) {
+				this.right = new NodeRank(d);
+			}
+			else {
+				left.insert(d);
+			}
+		}
+	}
+}
+*/
+
+public class Q4_RankFromStream {
+	RankNode root = null;
+	
+	void track(int number) {
+		if (root == null) {
+			root = new RankNode(number);
+		}
+		else {
+			root.insert(number);
+		}
+	}
+	
+	int getRankNumber(int number) {
+		return root.getRank(number);
+	}
+	
+	public    class RankNode {
+		public RankNode left, right;
+		public int data = 0;
+		public int left_size = 0;
+		
+		public RankNode(int d) {
+			data = d;
+		}
+		
+		public void insert(int d) {
+			if(d <= data) { // d <= data, on insère à gauche
+				if (left != null) {
+					left.insert(d);
+				}
+				else left = new RankNode(d);
+				left_size++;
+			}
+			else { // d > data, on insère à droite
+				if(right != null) {
+					right.insert(d);
+				}
+				else right = new RankNode(d);					
+			}
+		}
+		
+		public int getRank(int d) {
+			System.out.println("d =" + d + " left_size=" + left_size);
+			if (d == data) { // La donnée d == à la valeur du noeud, le rang est donc celui du compteur
+				return left_size;
+			}
+			else if (d < data) { // La donnée à insérer est < à la valeur du noeud, le rang ne change pas par rapport à celui de gauche 
+				if(left == null) return -1;
+				else return left.getRank(d);
+			}
+			else { // La donnée d à insérer est > valeur du noeud, le rang de droite est incrémenté de 1 par rapport au rang du noeud de gauche
+				int right_rank = right == null ? -1 : right.getRank(d);
+				if(right_rank == -1) return -1;
+				else return left_size + 1 + right_rank;
+			}
+		}
+		
+		
+		public   void main(String[] args) {
+			//Instantiate static nested class
+			Q4_RankFromStream.RankNode root = new Q4_RankFromStream.RankNode(20);
+			
+			//Instantiate non static nested class / inner class
+			/*
+			Q4_RankFromStream q4_RankFromStream = new Q4_RankFromStream();
+			Q4_RankFromStream.RankNode rootInnerClass = q4_RankFromStream.new RankNode(20);
+			*/
+			
+			root.insert(15);
+			root.insert(10);
+			root.insert(5);
+			root.insert(13);
+			
+			root.insert(25);
+			root.insert(23);
+			root.insert(24);
+			System.out.println("root" + root);
+			
+			int rank = root.getRank(23);
+		}
+	}
+}
+
+
+/*
+ * Complexité o(log(n) pour un arbre organisé (noeud < a gauche et noeud > a droite)
+ * Complexité o(n) pour un arbre "unbalanced"
+ * 
+ * Si la valeur d n'est pas trouv1ée dans l'arbre, on cherche la valeur -1 retournée dans tout l'arbre
+*/

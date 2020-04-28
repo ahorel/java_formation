@@ -1,0 +1,164 @@
+import java.util.List;
+import java.util.ArrayList;
+
+class Bird {
+  // ...
+  double getSpeed() {
+    switch (type) {
+      case EUROPEAN:
+        return getBaseSpeed();
+      case AFRICAN:
+        return getBaseSpeed() - getLoadFactor() * numberOfCoconuts;
+      case NORWEGIAN_BLUE:
+        return (isNailed) ? 0 : getBaseSpeed(voltage);
+    }
+    throw new RuntimeException("Should be unreachable");
+  }
+}
+
+abstract class Bird {
+  // ...
+  abstract double getSpeed();
+}
+
+class European extends Bird {
+  double getSpeed() {
+    return getBaseSpeed();
+  }
+}
+class African extends Bird {
+  double getSpeed() {
+    return getBaseSpeed() - getLoadFactor() * numberOfCoconuts;
+  }
+}
+class NorwegianBlue extends Bird {
+  double getSpeed() {
+    return (isNailed) ? 0 : getBaseSpeed(voltage);
+  }
+}
+
+// Somewhere in client code
+speed = bird.getSpeed();
+
+
+///////////////// APres remplacement du conditionnement avec du polymorphisme - Exemple basique
+
+class Bird0 {
+  private static String type;
+ 
+  double getSpeed() {
+    switch (type) {
+      case "EUROPEAN":
+        return 1;
+      case "AFRICAN":
+        return 2;
+      case "NORWEGIAN":
+        return 3;
+    }
+    throw new RuntimeException("Should be unreachable");
+  }
+}
+
+
+abstract class Bird1 {
+ // ...
+ abstract double getSpeed();
+}
+
+class European extends Bird1 {
+ double getSpeed() {
+   return 1;
+ }
+}
+class African extends Bird1 {
+ double getSpeed() {
+   return 2;
+ }
+}
+class NorwegianBlue extends Bird1 {
+ double getSpeed() {
+   return 3;
+ }
+}
+
+class Bird1Factory {
+public Bird1 getBird1(String type) {
+if(type == "EUROPEAN") {
+return new European();
+}
+else if(type == "NORWEGIAN") {
+return new NorwegianBlue();
+}
+else if(type == "AFRICAN") {
+return new African();
+}
+else {
+return null;
+}
+}
+}
+
+class Handler extends Bird1  {
+
+public void longMethodToRefactor() {
+
+//Without Factory Pattern
+List<Bird1> listBird1 = new ArrayList<Bird1>(){{
+add(new European());
+add(new NorwegianBlue());
+add(new African());
+
+
+}};
+for(Bird1 bird : listBird1) {
+bird.getSpeed();
+}
+
+//With Factory Pattern
+Bird1Factory birdFactory = new Bird1Factory();
+Bird1 bird1 = birdFactory.getBird1("NORWEGIAN");
+bird1.getSpeed();
+
+bird1 = birdFactory.getBird1("AFRICAN");
+bird1.getSpeed();
+
+bird1 = birdFactory.getBird1("EUROPEAN");
+bird1.getSpeed();
+}
+}
+
+
+
+
+//////////////// Apres remplacement du conditionnement avec du polymorphisme - Projet MGA 
+
+Utilise dans RedditionActionImpl.java
+
+public abstract class AbstractAction {
+	abstract RedditionVO getRedditionVO();
+}
+	
+public class TraitementActionValide extends AbstractAction{
+	RedditionVO getRedditionVO(){
+		System.out.println("traitement 1");
+		return new RedditionVO();
+	}
+}
+	
+	public class TraitementActionInterogTrocade extends AbstractAction{
+		RedditionVO getRedditionVO(){
+			System.out.println("Traitement 2");
+			return new RedditionVO();
+		}
+	}
+	
+	public class RedditionVOFactory {
+		public RedditionVO getRedditionVO(String status){
+			if(status == "ACTION_INTEROG_TROCAD"){
+				return new TraitementActionValide();
+			}
+			else if (status == "TraitementActionInterogTrocade"){
+				return new TraitementActionInterrogTrocade();
+			}
+		}
+	}
