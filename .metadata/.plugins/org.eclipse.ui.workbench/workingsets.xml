@@ -6,10 +6,10 @@
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1583057877525_1" label="Java Test Sources" name="Java Test Sources"/>
 <workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1588058355292_6" label="security-logging" name="security-logging">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/security-logging-logback" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/security-logging-log4j" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/security-logging" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/security-logging-common" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/security-logging-log4j" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/security-logging-logback" type="4"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1583057905748_2" label="Window Working Set" name="Aggregate for window 1583057905747"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1583594255171_3" label="Window Working Set" name="Aggregate for window 1583594255171"/>

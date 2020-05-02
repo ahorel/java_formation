@@ -1,8 +1,13 @@
+import org.owasp.security.logging.Utils;
+
 public class Handler {
 	public String nonStaticVariable = "nonStaticVariable";
 	public static String staticVariable = "staticVariable";
 	
 	public static void main(String[] args) {
+		String t = Utils.replaceCRLFWithUnderscore("test test");
+		System.out.println("owasp=" + t);
+		
 		RankNode root = new RankNode(20);
 
 		//Call inner class (non static nested)
