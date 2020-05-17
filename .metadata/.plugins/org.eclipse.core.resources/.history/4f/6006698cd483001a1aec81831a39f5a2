@@ -1,8 +1,0 @@
-
-public class ListeFactory {
-	public int cpt;
-
-	public ListeFactory(int cpt) {
-		this.cpt = cpt;
-	}
-}
