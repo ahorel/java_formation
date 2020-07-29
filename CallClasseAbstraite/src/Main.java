@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Main {
 	
@@ -28,19 +30,17 @@ public class Main {
 	*/
 	
 	   public static void main(String args[]) {
-		      // Instantiating the outer class
-		    /*  
-		   	Etape outer = new Etape();
-		      
-		      // Instantiating the inner class
-		      Etape.InnerEtape inner = new Etape.InnerEtape();
-		      System.out.println(inner.getNombre());
-		      */
-		      
-				List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
 
-				// Retourner une collection de n sous listes 
-				liste.stream().forEach(System.out::println);
-		   }
+		   Map<Integer,List<String>> map = new HashMap<Integer,List<String>>();
+		   map.put(0, Arrays.asList("a","b","c","d"));
+		   map.put(1, Arrays.asList("e","f","g","h"));
+		   map.put(2,Arrays.asList("i","j","k","l"));
+		   
+		   //Retourn une liste de string map.values().stream():
+		   
+		   map.forEach((u,v) -> 
+		   		v.stream().forEach(System.out::println));
+				   
+	   }
 }
 

@@ -32,27 +32,3 @@ public class ArrayList<E> {
         return (E) elements[i];
     }
 }
-
-public class myownarrayList<E> {
-	private int dataCapacity = 10
-	private Object elements[];
-	private int currentsize = 0;
-	
-	public void addValues(E e) {
-		if(currentsize == elements.length) {
-			ensureCapacity();
-		}
-		elements[currentsize++] = e;
-		
-	}
-	
-	public void ensureCapacity() {
-		int newsize = elements.length * 2;
-		elements = Arrays.copyOf(elements, newsize);
-		
-	}
-	
-	public E get(int i) {
-		return (E) elements[i];
-	}
-}

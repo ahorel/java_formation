@@ -1,9 +1,14 @@
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.math.BigDecimal;
 import java.util.ArrayList;
-
+import java.util.HashMap;
+import java.util.Iterator;
+/*
 public class CallDiscounterFunctionalInterface implements Discounter {
 	
 	public void call() {
@@ -11,11 +16,28 @@ public class CallDiscounterFunctionalInterface implements Discounter {
 		Discounter.christmasDiscounter();
 		Discounter.newYearDiscounter();
 	}
-}
+}*/
 
 public class Main implements Interface1{
 
 	public static void main(String[] args) {
+		Map<Integer,String> map = new HashMap<Integer,String>();
+		map.put(1,"a");
+		map.put(2,"b");
+		map.put(3,"c");
+		
+		Iterator it1 = map.entrySet().iterator();
+		Iterator it2 = map.keySet().iterator();
+		
+		while(it1.hasNext()) {
+			Map.Entry str = (Map.Entry) it1.next();
+			System.out.println( (String) str.getValue());
+			System.out.println(str.getKey());
+
+		}
+		
+		
+		
 		Discounter easterDiscounter = amount -> amount.multiply(BigDecimal.valueOf(0.5));
 		Discounter christmasDiscounter = amount -> amount.multiply(BigDecimal.valueOf(0.8));
 		
@@ -80,7 +102,7 @@ public class Main implements Interface1{
 		public void handler() {
 			Main.this.log("appel de la méthode log depuis interface ?");
 		}
-		T test = test -> test.create("","");
+		//T test = test -> test.create("","");
 		//Si plusieurs interfaces, diamond problem, on doit implémenter la method log dans la classe d'implementation
 		//De la manière suivante :
 		public void log() {
