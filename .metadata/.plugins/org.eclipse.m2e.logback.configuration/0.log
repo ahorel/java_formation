@@ -1191,3 +1191,57 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.apache.lo
 2020-07-23 11:10:21,920 [Worker-26: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2020-07-23 11:10:21,967 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\DEV\workspace\ThreadSafe\java-threadsafe-counter\src\test\resources
 2020-07-28 10:44:21,628 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-07-29 09:44:03,792 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-07-29 09:46:11,397 [Worker-10: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-29 09:46:11,515 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\DEV\workspace\Design patterns\FactoryDesignPattern\journaldev\java-design-patterns\Factory-Design-Pattern\src\main\resources
+2020-07-29 09:46:11,521 [Worker-10: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-29 09:46:11,586 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\DEV\workspace\Design patterns\FactoryDesignPattern\journaldev\java-design-patterns\Factory-Design-Pattern\src\test\resources
+2020-07-29 09:46:20,997 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-07-29 09:46:20,997 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\DEV\workspace\GitHub Design Patterns\java-design-patterns\strategy\src\main\resources
+2020-07-29 09:46:21,000 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-07-29 09:46:21,000 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\DEV\workspace\GitHub Design Patterns\java-design-patterns\strategy\src\test\resources
+2020-07-29 09:46:26,843 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-07-29 09:46:26,844 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\DEV\workspace\Design patterns\OWASP_Security_Logging\owasp-security-logging\owasp-security-logging-common\src\main\resources
+2020-07-29 09:46:26,846 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-07-29 09:46:26,847 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\DEV\workspace\Design patterns\OWASP_Security_Logging\owasp-security-logging\owasp-security-logging-common\src\test\resources
+2020-07-29 09:46:31,399 [Worker-21: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/security-logging-common: org.owasp:security-logging-common:1.1.6 with classifier  to /security-logging-common/target/classes
+2020-07-29 09:46:31,843 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-07-29 09:46:31,844 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\DEV\workspace\Design patterns\OWASP_Security_Logging\owasp-security-logging\owasp-security-logging-log4j\src\main\resources
+2020-07-29 09:46:31,846 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-07-29 09:46:31,859 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-07-29 09:46:35,153 [Worker-4: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/security-logging-common: org.owasp:security-logging-common:1.1.6 with classifier  to /security-logging-common/target/classes
+2020-07-29 09:46:35,173 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-07-29 09:46:35,174 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\DEV\workspace\Design patterns\OWASP_Security_Logging\owasp-security-logging\owasp-security-logging-logback\src\main\resources
+2020-07-29 09:46:35,176 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-07-29 09:46:35,177 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2020-07-29 09:46:36,968 [Worker-20: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-29 09:46:37,038 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\DEV\workspace\ThreadSafe\java-threadsafe-counter\src\main\resources
+2020-07-29 09:46:37,041 [Worker-20: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-29 09:46:37,054 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\DEV\workspace\ThreadSafe\java-threadsafe-counter\src\test\resources
+2020-08-02 09:27:03,783 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-08-02 09:28:24,350 [Worker-1: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-08-02 09:28:24,480 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\DEV\workspace\Design patterns\FactoryDesignPattern\journaldev\java-design-patterns\Factory-Design-Pattern\src\main\resources
+2020-08-02 09:28:24,483 [Worker-1: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-08-02 09:28:24,495 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\DEV\workspace\Design patterns\FactoryDesignPattern\journaldev\java-design-patterns\Factory-Design-Pattern\src\test\resources
+2020-08-02 09:28:34,099 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-02 09:28:34,099 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\DEV\workspace\GitHub Design Patterns\java-design-patterns\strategy\src\main\resources
+2020-08-02 09:28:34,102 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-02 09:28:34,103 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\DEV\workspace\GitHub Design Patterns\java-design-patterns\strategy\src\test\resources
+2020-08-02 09:28:38,363 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-02 09:28:38,364 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\DEV\workspace\Design patterns\OWASP_Security_Logging\owasp-security-logging\owasp-security-logging-common\src\main\resources
+2020-08-02 09:28:38,366 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-02 09:28:38,366 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\DEV\workspace\Design patterns\OWASP_Security_Logging\owasp-security-logging\owasp-security-logging-common\src\test\resources
+2020-08-02 09:28:39,590 [Worker-1: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/security-logging-common: org.owasp:security-logging-common:1.1.6 with classifier  to /security-logging-common/target/classes
+2020-08-02 09:28:39,665 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-02 09:28:39,665 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\DEV\workspace\Design patterns\OWASP_Security_Logging\owasp-security-logging\owasp-security-logging-log4j\src\main\resources
+2020-08-02 09:28:39,668 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-02 09:28:39,678 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-08-02 09:28:41,965 [Worker-1: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/security-logging-common: org.owasp:security-logging-common:1.1.6 with classifier  to /security-logging-common/target/classes
+2020-08-02 09:28:41,995 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-02 09:28:41,996 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\DEV\workspace\Design patterns\OWASP_Security_Logging\owasp-security-logging\owasp-security-logging-logback\src\main\resources
+2020-08-02 09:28:41,999 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-08-02 09:28:42,000 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2020-08-02 09:28:42,962 [Worker-1: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-08-02 09:28:42,988 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\DEV\workspace\ThreadSafe\java-threadsafe-counter\src\main\resources
+2020-08-02 09:28:42,991 [Worker-1: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-08-02 09:28:43,002 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\DEV\workspace\ThreadSafe\java-threadsafe-counter\src\test\resources

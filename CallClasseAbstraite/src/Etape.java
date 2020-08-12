@@ -1,6 +1,11 @@
 
 public class Etape {
 	private  EtapesAbstract state = new Etape1();
+	public int id;
+	
+	public int getId() {
+		return id;
+	}
 	public void setState(EtapesAbstract state) {
 		this.state = state;
 	}

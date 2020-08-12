@@ -3,6 +3,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Main {
 	
@@ -40,7 +41,35 @@ public class Main {
 		   
 		   map.forEach((u,v) -> 
 		   		v.stream().forEach(System.out::println));
-				   
+		   
+		   Map<Integer, List<Etape>> map2 = listMain.stream()
+		   .flatMap(m -> m.getEtapes().stream())
+		   .collect(Collectors.groupingBy(Etape::getId));
+		   
+	}
+	   
+	   public static List<Main> listMain = new ArrayList<Main>(); 
+	   public int id;
+	   public List<Etape> listEtapes;
+	   
+	   public List<Etape> getEtapes(){
+		   return listEtapes;
+	   }
+	   public int getId() {
+		   return id;
+	   }
+	   
+	   public void setId(int id) {
+		   this.id = id;
+	   }
+	   
+	   public List<Integer> getListeEntiers(){
+		   List<Integer> list = new ArrayList<Integer>();
+		   list.add(1);
+		   list.add(2);
+		   list.add(3);
+		   list.add(4);
+		   return list;
 	   }
 }
 
