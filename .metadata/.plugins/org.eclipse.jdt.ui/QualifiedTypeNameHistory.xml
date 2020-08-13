@@ -18,4 +18,15 @@
 <fullyQualifiedTypeName name="java.util.BitSet"/>
 <fullyQualifiedTypeName name="Q5_FindDuplicates.BitVector"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="builders.Builder"/>
+<fullyQualifiedTypeName name="cars.Type"/>
+<fullyQualifiedTypeName name="compenents.Engine"/>
+<fullyQualifiedTypeName name="compenents.Transmission"/>
+<fullyQualifiedTypeName name="compenents.TripComputer"/>
+<fullyQualifiedTypeName name="compenents.GPSNavigator"/>
+<fullyQualifiedTypeName name="cars.Manual"/>
+<fullyQualifiedTypeName name="builders.CarManualBuilder"/>
+<fullyQualifiedTypeName name="cars.Car"/>
+<fullyQualifiedTypeName name="director.Director"/>
+<fullyQualifiedTypeName name="builders.CarBuilder"/>
 </qualifiedTypeNameHistroy>
