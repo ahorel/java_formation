@@ -1245,3 +1245,4 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.apache.lo
 2020-08-02 09:28:42,988 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\DEV\workspace\ThreadSafe\java-threadsafe-counter\src\main\resources
 2020-08-02 09:28:42,991 [Worker-1: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2020-08-02 09:28:43,002 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\DEV\workspace\ThreadSafe\java-threadsafe-counter\src\test\resources
+2020-08-13 10:53:49,464 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
